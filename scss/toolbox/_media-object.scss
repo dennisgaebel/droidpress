@@ -1,0 +1,52 @@
+// @example
+//
+// <div class="media-obj">
+//   <img class="media-obj__fig" src="" alt="">
+//   <div class="media-obj__body">…</div>
+// </div>
+
+.media-obj {
+  display: table;
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+
+  &--vcenter {
+    align-items: center;
+  }
+
+  &--reverse &__fig {
+    order: 2;
+  }
+
+  &--reverse &__body {
+    order: 1;
+  }
+
+  &--center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--hcenter {
+    justify-content: center;
+  }
+
+  &--caption {
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  &__fig,
+  &__body {
+    // IE10 & Maybe 11
+    .flexboxtweener & {
+      display: table-row;
+    }
+  }
+
+}

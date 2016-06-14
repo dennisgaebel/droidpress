@@ -1,0 +1,25 @@
+// @example
+//
+// <div class="banner">
+//   <div class="banner__wrap">
+//     <img src="" class="banner__img">
+//   </div>
+
+//   <div class="banner__wrap">
+//     <img src="" class="banner__img">
+//   </div>
+// </div>
+
+
+.banner {
+  display: flex;
+
+  &__wrap,
+  &__img {
+    flex: 1;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

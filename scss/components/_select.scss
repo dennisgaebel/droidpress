@@ -1,0 +1,9 @@
+select {
+  $spacing: 10px;
+  appearance: none;
+  cursor: pointer;
+  padding: $spacing;
+  width: 100%;
+  background: white img-url('svgsprite.svg#arrow-down') right ($spacing * 2) top 50% no-repeat;
+  background-size: 25px;
+}

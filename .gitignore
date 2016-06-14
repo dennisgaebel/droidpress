@@ -1,0 +1,28 @@
+# OS or Editor folders
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Ignore sass-cache directory
+.sass-cache
+
+# Sourcemaps
+*.*.map
+
+#Pkg Installs
+node_modules
+bower_components
+
+#Output
+*.log
+
+#Build Ignores
+img/dist
+js/dist

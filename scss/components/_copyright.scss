@@ -1,0 +1,14 @@
+.site-info {
+  $bg: black;
+  $color: white;
+  display: block;
+  text-align: center;
+  background: $bg;
+  color: $color;
+}
+
+
+.site-info a[href*="luminusmedia"] {
+  &:visited {}
+  &:hover {}
+}

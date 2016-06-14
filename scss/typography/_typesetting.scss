@@ -1,0 +1,175 @@
+// ==========================================================================
+// $Custom Fonts
+// ==========================================================================
+
+// @import "font-family-name";
+
+// RWD Titles
+// @include typescale(
+//   map-get($scale, beta),
+//   $font-base,
+//   #{$typescale-unit},
+//   $measure
+// );
+
+
+// ==========================================================================
+// $Base
+// ==========================================================================
+
+$serif-boolean: true;
+$font-family: if($serif-boolean, serif, sans-serif);
+$font-weight: normal;
+$line-height: 1.5;
+$font-size: 100;
+$font-base: 16 * ($font-size/100);
+$indent-val: 1.5rem;
+$measure: $font-base * $line-height;
+$prefixes: -webkit-, -moz-, -ms-, '';
+
+
+// ==========================================================================
+// $Typescale
+// Greek heading names and scale using base font-size
+// ==========================================================================
+//
+// tera                    117 = 18 × 6.5
+// giga                     90 = 18 × 5
+// mega                     72 = 18 × 4
+// alpha                    60 = 18 × 3.3333
+// beta                     48 = 18 × 2.6667
+// gamma                    36 = 18 × 2
+// delta                    24 = 18 × 1.3333
+// epsilon                  21 = 18 × 1.1667
+// zeta                     18 = 18 × 1
+
+$scale: (
+  tera: 117,
+  giga: 90,
+  mega: 72,
+  alpha: 60,
+  beta: 48,
+  gamma: 36,
+  delta: 24,
+  epsilon: 21,
+  zeta: 18,
+) !default;
+
+$headings: (
+  h1: mega,
+  h2: alpha,
+  h3: beta,
+  h4: gamma,
+  h5: delta,
+  h6: zeta
+) !default;
+
+
+// ==========================================================================
+// $Typescale Unit
+// ==========================================================================
+
+$typescale-unit: em;
+
+
+// ==========================================================================
+// $Wordwrap
+// Control word wrapping and breaks in your text.
+// ==========================================================================
+//
+// 'normal'                     Lines may only break at normal word break points.
+// 'break-word'                 Unbreakable words may be broken at arbitrary points.
+//
+// @example                     article { @extend %breakword; }
+
+%breakword {
+  word-wrap: break-word;
+}
+
+%normal-wrap {
+  word-wrap: normal;
+}
+
+%inherit-wrap {
+  word-wrap: auto;
+}
+
+
+// ==========================================================================
+// $OpenType
+// Control OpenType feature settings where desired.
+// ==========================================================================
+//
+// @use
+// smallcaps                body { @extend %ot--smcp; }
+// text figures             body { @extend %ot--onum; }
+
+%ot--smcp {
+  @each $prefix in $prefixes {
+    #{$prefix}font-feature-settings: "smcp";
+  }
+}
+
+%ot--onum {
+  @each $prefix in $prefixes {
+    #{$prefix}font-feature-settings: 'onum';
+  }
+}
+
+
+// ==========================================================================
+// Global
+// ==========================================================================
+
+body {
+  @include font-loader(normal, 'sans-serif');
+  word-wrap: break-word;
+  font: normal 100%/1.5 sans-serif; // 16px base
+
+  .cssanimations & {
+    animation: fadeIn 0.5s cubic-bezier(.57,.25,.65,1) 0.25s 1 forwards;
+    opacity: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+  line-height: 1;
+  margin-top: 0;
+  text-rendering: optimizeLegibility;
+}
+
+@include headings;
+@include headings-style;
+
+input,
+abbr,
+acronym,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+  hyphens: none;
+}
+
+pre code {
+  word-wrap: normal;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+
+pre,
+code {
+  white-space: pre;
+}
+
+code {
+  font-family: monospace;
+}

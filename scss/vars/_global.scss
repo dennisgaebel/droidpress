@@ -1,0 +1,50 @@
+// --------------------------------------------------------
+// Config
+// --------------------------------------------------------
+
+// @example : functions/_img-url.scss
+// background: img-url('picture.jpg') top left no-repeat;
+$img-dir: "./img/" !default;
+
+// @example : functions/_asset-helper.scss
+// Base path for assets (fonts, images...),
+// should not include trailing slash
+// @access public
+// @type String
+// $asset-base-path: "./img/" !default;
+
+
+// --------------------------------------------------------
+// Media Query Mixin
+// @requires mixins/_media-query.scss
+// --------------------------------------------------------
+
+$min: min-width;
+$max: max-width;
+$max-height: max-height;
+$min-device: min-device-width;
+$max-device: max-device-width;
+$viewport-increment: 0.1px;
+
+$max-w-sm: 400px;
+$max-w-lg: 1170px;
+
+$pre-max-w-lg: $max-w-lg - $viewport-increment;
+$post-max-w-lg: $max-w-lg + $viewport-increment;
+
+
+// --------------------------------------------------------
+// Global Colors
+// --------------------------------------------------------
+
+$selection-highlight-color: blue !default;
+$global-link-color: blue !default;
+$placeholder-color: #AAAAAA !default;
+
+
+// --------------------------------------------------------
+// Spacing & Layout
+// --------------------------------------------------------
+
+$gutter: 20px;
+$column: 100px;

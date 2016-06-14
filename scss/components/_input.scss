@@ -1,0 +1,9 @@
+input:not([type="submit"]),
+textarea {
+  width: 100%;
+  background: white;
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}

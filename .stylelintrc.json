@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "declaration-colon-space-after": "always",
+    "value-list-comma-space-after": "always",
+    "function-comma-space-after": "always"
+  }
+}

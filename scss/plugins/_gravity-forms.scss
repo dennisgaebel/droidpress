@@ -1,0 +1,23 @@
+.gfield_label,
+label[for*="input"] {
+	@extend .visuallyhidden;
+}
+
+.gform_wrapper,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container, .gform_wrapper li.gfield_html {
+	max-width: 100% !important;
+}
+
+.gform_wrapper .ginput_complex span.name_first, .gform_wrapper .ginput_complex span.name_last, .gform_wrapper .ginput_complex span.name_middle {
+	min-height: auto !important;
+}
+
+.gform_wrapper input,
+.gform_wrapper .top_label .gfield_error,
+.gform_wrapper div.validation_error {
+	width: 100% !important;
+}
+
+.gform_wrapper textarea.large {
+	width: 100% !important;
+}
