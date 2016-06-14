@@ -31,7 +31,7 @@
 		<?php endif; ?>
 
     <small class="site-info">
-      <span class="">©<?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>, All Rights Reserved. | Website by <a href="https://www.luminusmedia.com" rel="designer" target="_blank">LUMINUS</a></span>
+      <span class="">©<?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>, All Rights Reserved. | Website by <a href="#" rel="designer" target="_blank">Author</a></span>
     </small>
 
 	</footer>
@@ -49,7 +49,7 @@
 <?php endif; ?>
 
 <?php if( include_check('contact') ) : ?>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiuk-6NIuwDMW8u7khGCtsHZ6e3ejOVcM"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key="></script>
   <script src="<?php echo get_template_directory_uri() . '/js/src/google-maps.js'; ?>"></script>
 <?php endif; ?>
 
